@@ -17,7 +17,6 @@ exports.createProduct = (req, res) => {
   dataStore.products.push(product);
   res.status(201).json(product);
 };
-
 exports.updateProduct = (req, res) => {
   const { id } = req.params;
   const index = dataStore.products.findIndex((p) => p.id === id);
